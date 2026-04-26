@@ -246,6 +246,19 @@ h1 {
   letter-spacing: -0.03em;
 }
 
+.topic-link {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 0.18em;
+  transition: text-decoration-color 160ms ease, color 160ms ease;
+}
+
+.topic-link:hover,
+.topic-link:focus-visible {
+  color: var(--accent-deep);
+  text-decoration-color: currentColor;
+}
+
 .topic-card ul {
   margin: 0;
   padding-left: 1.2rem;
@@ -265,6 +278,21 @@ h1 {
 .content-sections {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   margin-bottom: 4rem;
+}
+
+.page-hero {
+  min-height: auto;
+}
+
+.page-sections {
+  margin-top: 1rem;
+}
+
+.topic-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+  line-height: 1.7;
 }
 
 .how-to-use {
