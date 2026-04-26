@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apprentice Electrical Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="top-nav">
+      <a class="brand" href="#top">Apprentice Electrical Hub</a>
+      <div class="nav-links">
+        <a href="#theory">Theory</a>
+        <a href="#residential">Residential</a>
+        <a href="#commercial">Commercial</a>
+        <a href="#code">Code Notes</a>
+      </div>
+    </nav>
+
+    <div class="hero-content" id="top">
+      <p class="eyebrow">Built for Canadian apprentices</p>
+      <h1>A study website you can return to during school and on the job.</h1>
+      <p class="hero-copy">
+        Keep your notes on electrical theory, wiring methods, and code references in one place.
+        Start simple, then add diagrams, formulas, and class notes as you move through your apprenticeship.
+      </p>
+      <div class="hero-actions">
+        <a class="button primary" href="#library">Open the library</a>
+        <a class="button secondary" href="#how-to-use">How to use this site</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro-grid">
+      <article class="intro-card">
+        <h2>Why this site exists</h2>
+        <p>
+          Apprentices often collect notes in notebooks, screenshots, and random bookmarks.
+          This site gives you one dependable place to keep the topics you review most often.
+        </p>
+      </article>
+      <article class="intro-card">
+        <h2>How to grow it</h2>
+        <p>
+          Add one concept at a time. A short explanation, one formula, and one real-world example
+          is enough to make each section useful.
+        </p>
+      </article>
+      <article class="intro-card">
+        <h2>Important reminder</h2>
+        <p>
+          Treat this as a study aid, not a replacement for the Canadian Electrical Code,
+          provincial rules, manufacturer instructions, or your instructor and journeyperson guidance.
+        </p>
+      </article>
+    </section>
+
+    <section class="library" id="library">
+      <div class="section-heading">
+        <p class="eyebrow">Reference library</p>
+        <h2>Find topics quickly</h2>
+        <p>Use the filter buttons or search box to narrow the cards below.</p>
+      </div>
+
+      <div class="library-tools">
+        <div class="filter-buttons" aria-label="Topic filters">
+          <button class="filter-button active" data-filter="all">All</button>
+          <button class="filter-button" data-filter="theory">Theory</button>
+          <button class="filter-button" data-filter="residential">Residential</button>
+          <button class="filter-button" data-filter="commercial">Commercial</button>
+          <button class="filter-button" data-filter="code">Code</button>
+        </div>
+        <label class="search-box">
+          <span class="visually-hidden">Search topics</span>
+          <input id="searchInput" type="search" placeholder="Search for voltage, boxes, grounding, conduit...">
+        </label>
+      </div>
+
+      <div class="card-grid">
+        <article class="topic-card" data-category="theory" data-search="ohms law current voltage resistance power formulas">
+          <p class="card-tag">Theory</p>
+          <h3>Ohm's Law and Power</h3>
+          <p>Review the relationship between voltage, current, resistance, and power before moving into load calculations.</p>
+          <ul>
+            <li>V = I x R</li>
+            <li>P = V x I</li>
+            <li>Helpful for troubleshooting simple circuits</li>
+          </ul>
+        </article>
+
+        <article class="topic-card" data-category="theory" data-search="series parallel circuits troubleshooting voltage drop">
+          <p class="card-tag">Theory</p>
+          <h3>Series and Parallel Circuits</h3>
+          <p>Build your understanding of how current and voltage behave differently in each circuit type.</p>
+          <ul>
+            <li>Series: one path for current</li>
+            <li>Parallel: multiple current paths</li>
+            <li>Useful for troubleshooting branch circuits</li>
+          </ul>
+        </article>
+
+        <article class="topic-card" data-category="residential" data-search="residential wiring receptacles switches branch circuits box fill">
+          <p class="card-tag">Residential</p>
+          <h3>Basic Branch Circuit Layouts</h3>
+          <p>Keep notes on receptacle spacing, switch loops, lighting layouts, and how you rough-in rooms cleanly.</p>
+          <ul>
+            <li>Room-by-room planning</li>
+            <li>Device box placement</li>
+            <li>Common rough-in reminders</li>
+          </ul>
+        </article>
+
+        <article class="topic-card" data-category="residential" data-search="services panels grounding bonding residential">
+          <p class="card-tag">Residential</p>
+          <h3>Service, Grounding, and Bonding</h3>
+          <p>Document the key differences between grounded conductors, bonding paths, and grounding electrode systems.</p>
+          <ul>
+            <li>Main service concepts</li>
+            <li>Panel organization ideas</li>
+            <li>Safety-first review notes</li>
+          </ul>
+        </article>
+
+        <article class="topic-card" data-category="commercial" data-search="conduit emt bending boxes supports commercial wiring">
+          <p class="card-tag">Commercial</p>
+          <h3>Conduit and Raceway Basics</h3>
+          <p>Track what you learn about EMT, connectors, supports, box offsets, and clean routing practices.</p>
+          <ul>
+            <li>Raceway types</li>
+            <li>Support and secure concepts</li>
+            <li>Bending notes and field tips</li>
+          </ul>
+        </article>
+
+        <article class="topic-card" data-category="commercial" data-search="three phase motors disconnects commercial services">
+          <p class="card-tag">Commercial</p>
+          <h3>Three-Phase and Motor Basics</h3>
+          <p>Use this section for motor starters, disconnects, and three-phase system fundamentals you see in school or field work.</p>
+          <ul>
+            <li>Motor circuit components</li>
+            <li>Basic three-phase concepts</li>
+            <li>Equipment identification notes</li>
+          </ul>
+        </article>
+
+        <article class="topic-card" data-category="code" data-search="canadian electrical code references definitions tables sections">
+          <p class="card-tag">Code</p>
+          <h3>Code Reference Notes</h3>
+          <p>Keep your own plain-language summaries of sections, rules, and tables that come up often in class.</p>
+          <ul>
+            <li>Definitions worth memorizing</li>
+            <li>Tables you use often</li>
+            <li>Rule summaries in your own words</li>
+          </ul>
+        </article>
+
+        <article class="topic-card" data-category="code" data-search="cec study reminders safety updates">
+          <p class="card-tag">Code</p>
+          <h3>Study Reminders and Updates</h3>
+          <p>Add reminders about where to verify official information so your notes stay useful without becoming misleading.</p>
+          <ul>
+            <li>Check edition and local adoption</li>
+            <li>Mark notes with dates</li>
+            <li>Separate facts from memory aids</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-sections">
+      <article class="detail-panel" id="theory">
+        <p class="eyebrow">Electrical theory</p>
+        <h2>Start with the fundamentals</h2>
+        <p>
+          A strong theory section helps everything else make sense. This is where you can explain
+          current, voltage, resistance, power, magnetism, transformers, and basic troubleshooting steps.
+        </p>
+        <p>
+          Good habit: for each topic, add a definition, a formula if there is one, and one practical
+          example from class or the field.
+        </p>
+      </article>
+
+      <article class="detail-panel" id="residential">
+        <p class="eyebrow">Residential wiring</p>
+        <h2>Organize the work you see most often</h2>
+        <p>
+          This section is great for layouts, device boxes, cable runs, panels, service notes,
+          and common troubleshooting situations in homes.
+        </p>
+        <p>
+          You can later break this into subtopics like kitchens, bathrooms, smoke alarms,
+          arc-fault protection, and service upgrades.
+        </p>
+      </article>
+
+      <article class="detail-panel" id="commercial">
+        <p class="eyebrow">Commercial wiring</p>
+        <h2>Capture methods, materials, and systems</h2>
+        <p>
+          Use this section for conduit systems, box installation, support rules, lighting controls,
+          motor basics, and the equipment that tends to show up outside residential jobs.
+        </p>
+        <p>
+          As you advance, you can add sketches, bend references, and common installation details.
+        </p>
+      </article>
+
+      <article class="detail-panel" id="code">
+        <p class="eyebrow">Code and standards</p>
+        <h2>Keep notes simple and clearly labeled</h2>
+        <p>
+          Code-related notes are most useful when they point you back to the official source.
+          Write your own summaries, but include the section or table you learned from so you can verify it later.
+        </p>
+        <p>
+          Because code can change by edition and local adoption, date your notes and avoid presenting memory aids as final authority.
+        </p>
+      </article>
+    </section>
+
+    <section class="how-to-use" id="how-to-use">
+      <div class="section-heading">
+        <p class="eyebrow">Your next steps</p>
+        <h2>How to turn this into your own resource</h2>
+      </div>
+      <ol class="steps-list">
+        <li>Open the site in your browser and look around.</li>
+        <li>Edit the wording in the cards so it matches what you are learning in school.</li>
+        <li>Add new cards for topics like transformers, load calculations, conduit fill, or motors.</li>
+        <li>Later, create extra pages for deeper topics when one section becomes too large.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Apprentice Electrical Hub</p>
+    <p>Built as a learning project so you can grow your site while you grow your trade knowledge.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
