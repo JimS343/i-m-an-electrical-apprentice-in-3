@@ -140,7 +140,8 @@ h1 {
 
 .intro-grid,
 .card-grid,
-.content-sections {
+.content-sections,
+.training-grid {
   display: grid;
   gap: 1.25rem;
 }
@@ -152,6 +153,7 @@ h1 {
 
 .intro-card,
 .topic-card,
+.training-card,
 .detail-panel,
 .library-tools,
 .how-to-use,
@@ -163,6 +165,7 @@ h1 {
 
 .intro-card,
 .topic-card,
+.training-card,
 .detail-panel,
 .how-to-use {
   border-radius: 28px;
@@ -278,6 +281,36 @@ h1 {
 .content-sections {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   margin-bottom: 4rem;
+}
+
+.apprentice-training {
+  margin-bottom: 4rem;
+}
+
+.training-grid {
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.training-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.training-card h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  letter-spacing: -0.03em;
+}
+
+.training-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+.training-card-wide {
+  grid-column: 1 / -1;
 }
 
 .page-hero {
