@@ -74,6 +74,54 @@ h3 {
   color: var(--muted);
 }
 
+.nav-dropdown {
+  position: relative;
+  padding-bottom: 0.9rem;
+  margin-bottom: -0.9rem;
+}
+
+.nav-dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.nav-dropdown-toggle::after {
+  content: "v";
+  font-size: 0.75rem;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% - 0.2rem);
+  right: 0;
+  min-width: 180px;
+  display: none;
+  flex-direction: column;
+  padding: 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface-strong);
+  box-shadow: var(--shadow);
+  z-index: 10;
+}
+
+.dropdown-menu a {
+  padding: 0.7rem 0.85rem;
+  border-radius: 12px;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a:focus-visible {
+  background: rgba(212, 106, 30, 0.12);
+  color: var(--accent-deep);
+}
+
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu {
+  display: flex;
+}
+
 .hero-content {
   padding: 5rem 0 3rem;
   max-width: 760px;
@@ -287,6 +335,11 @@ h1 {
   margin-bottom: 4rem;
 }
 
+.template-overview,
+.study-template {
+  margin-bottom: 4rem;
+}
+
 .training-grid {
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
 }
@@ -328,6 +381,24 @@ h1 {
   line-height: 1.7;
 }
 
+.toc-card {
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: 1.5rem;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.toc-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  line-height: 1.9;
+}
+
+.template-prompt {
+  font-style: italic;
+}
+
 .how-to-use {
   margin-bottom: 4rem;
 }
@@ -364,6 +435,16 @@ h1 {
   .library-tools {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .nav-links {
+    flex-direction: column;
+  }
+
+  .dropdown-menu {
+    position: static;
+    display: flex;
+    margin-top: 0.5rem;
   }
 
   .hero-content {
