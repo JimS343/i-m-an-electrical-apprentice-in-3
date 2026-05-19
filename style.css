@@ -10,6 +10,18 @@
   --shadow: 0 20px 50px rgba(54, 33, 18, 0.12);
 }
 
+body[data-theme="dark"] {
+  --bg: #10161b;
+  --surface: rgba(24, 32, 39, 0.9);
+  --surface-strong: #1a232b;
+  --text: #edf2f4;
+  --muted: #b4c0c7;
+  --accent: #e08a3a;
+  --accent-deep: #ffb36b;
+  --line: rgba(237, 242, 244, 0.12);
+  --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -25,6 +37,12 @@ body {
   background:
     radial-gradient(circle at top left, rgba(212, 106, 30, 0.18), transparent 30%),
     linear-gradient(180deg, #f7f2e9 0%, #f4ebde 42%, #efe2cf 100%);
+}
+
+body[data-theme="dark"] {
+  background:
+    radial-gradient(circle at top left, rgba(224, 138, 58, 0.18), transparent 28%),
+    linear-gradient(180deg, #121920 0%, #0f151a 48%, #0b1015 100%);
 }
 
 a {
@@ -55,6 +73,10 @@ main,
   backdrop-filter: blur(16px);
 }
 
+body[data-theme="dark"] .top-nav {
+  background: rgba(18, 25, 32, 0.82);
+}
+
 .brand,
 h1,
 h2,
@@ -72,6 +94,45 @@ h3 {
   flex-wrap: wrap;
   gap: 1rem;
   color: var(--muted);
+}
+
+.nav-utility {
+  display: inline-flex;
+  align-items: center;
+  margin-left: auto;
+  padding-left: 1rem;
+  border-left: 1px solid var(--line);
+}
+
+.theme-toggle {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-strong);
+  color: var(--text);
+  padding: 0.7rem 0.95rem;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  color: var(--accent-deep);
+  border-color: rgba(224, 138, 58, 0.4);
+}
+
+body[data-theme="dark"] .theme-toggle {
+  background: #1a252e;
+  color: #f4f7f8;
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+body[data-theme="dark"] .theme-toggle:hover,
+body[data-theme="dark"] .theme-toggle:focus-visible {
+  background: #22313c;
+  color: #ffd4a6;
+  border-color: rgba(255, 179, 107, 0.4);
 }
 
 .nav-dropdown {
@@ -107,16 +168,32 @@ h3 {
   z-index: 10;
 }
 
+body[data-theme="dark"] .dropdown-menu {
+  background: #162028;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
 .dropdown-menu a {
   padding: 0.7rem 0.85rem;
   border-radius: 12px;
   line-height: 1.4;
 }
 
+body[data-theme="dark"] .dropdown-menu a {
+  color: #eef3f5;
+  background: rgba(255, 255, 255, 0.02);
+}
+
 .dropdown-menu a:hover,
 .dropdown-menu a:focus-visible {
   background: rgba(212, 106, 30, 0.12);
   color: var(--accent-deep);
+}
+
+body[data-theme="dark"] .dropdown-menu a:hover,
+body[data-theme="dark"] .dropdown-menu a:focus-visible {
+  background: rgba(255, 179, 107, 0.1);
+  color: #fff0dd;
 }
 
 .nav-dropdown:hover .dropdown-menu,
@@ -150,6 +227,7 @@ h1 {
 .detail-panel p,
 .intro-card p,
 .topic-card p,
+.training-card p,
 .site-footer p,
 .steps-list {
   color: var(--muted);
@@ -186,6 +264,30 @@ h1 {
 
 .button.secondary {
   background: rgba(255, 255, 255, 0.45);
+}
+
+body[data-theme="dark"] .button.primary {
+  background: #1f2b34;
+  color: #f8fbfc;
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+body[data-theme="dark"] .button.primary:hover,
+body[data-theme="dark"] .button.primary:focus-visible {
+  background: #273743;
+  color: #fff1df;
+}
+
+body[data-theme="dark"] .button.secondary {
+  background: rgba(26, 37, 46, 0.96);
+  color: #eef3f5;
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+body[data-theme="dark"] .button.secondary:hover,
+body[data-theme="dark"] .button.secondary:focus-visible {
+  background: #22313c;
+  color: #fff1df;
 }
 
 .intro-grid,
@@ -441,6 +543,12 @@ h1 {
 
   .nav-links {
     flex-direction: column;
+  }
+
+  .nav-utility {
+    margin-left: 0;
+    padding-left: 0;
+    border-left: 0;
   }
 
   .dropdown-menu {
