@@ -95,7 +95,8 @@ h3 {
   position: absolute;
   top: calc(100% - 0.2rem);
   right: 0;
-  min-width: 180px;
+  min-width: 320px;
+  max-width: min(360px, calc(100vw - 3rem));
   display: none;
   flex-direction: column;
   padding: 0.55rem;
@@ -109,6 +110,7 @@ h3 {
 .dropdown-menu a {
   padding: 0.7rem 0.85rem;
   border-radius: 12px;
+  line-height: 1.4;
 }
 
 .dropdown-menu a:hover,
